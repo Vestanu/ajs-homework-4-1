@@ -15,5 +15,11 @@ test('выдает число, если ввели строку с числом'
 test('выдает ошибку, если ввели не число', () => {
   expect(() => {
     checkForm('привет');
-  }).toThrow();
+  }).toThrowError('is NaN');
+});
+
+
+test('выдает число, если ввели массив', () => {
+  const numberValue = checkForm([123]);
+  expect(numberValue).toBe(123);
 });
