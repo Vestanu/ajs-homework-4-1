@@ -5,10 +5,9 @@ function checkForm(value) {
   try {
     if (Number(value)) {
       return Number(value);
-    }
-    throw ('is NaN');
+    } throw new Error('is NaN');
   } catch (e) {
-    return console.log(e);
+    throw Error('is NaN');
   }
 }
 

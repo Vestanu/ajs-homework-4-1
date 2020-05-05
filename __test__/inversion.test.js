@@ -13,6 +13,7 @@ test('выдает число, если ввели строку с числом'
 });
 
 test('выдает ошибку, если ввели не число', () => {
-  const numberValue = checkForm('привет');
-  expect(numberValue).toBe(undefined);
+  expect(() => {
+    checkForm('привет');
+  }).toThrow();
 });
